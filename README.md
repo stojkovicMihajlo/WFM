@@ -9,6 +9,10 @@ Official PyTorch implementation of **WFM: 3D Wavelet Flow Matching for Ultrafast
 
 Diffusion models have achieved remarkable quality in multi-modal MRI synthesis, but their computational cost—hundreds of sampling steps and separate models per modality—limits clinical deployment. We observe that this inefficiency stems from an unnecessary starting point: diffusion begins from pure noise, discarding the structural information already present in available MRI sequences. We propose WFM (Wavelet Flow Matching), which instead learns a direct flow from an *informed prior*—the mean of conditioning modalities in wavelet space—to the target distribution. Because source and target share underlying anatomy and differ primarily in contrast, this formulation enables accurate synthesis in just 1-2 integration steps. A single 82M-parameter model with class conditioning synthesizes all four BraTS modalities (T1, T1c, T2, FLAIR), replacing four separate diffusion models totaling 326M parameters. On BraTS 2024, WFM achieves 26.8 dB PSNR and 0.94 SSIM—within 1-2 dB of diffusion baselines—while running 250-1000× faster (0.16-0.64s vs. 160s per volume).
 
+<p align="center">
+  <img src="assets/github_figure.png" width="800"/>
+</p>
+
 ## Key Features
 
 - **Ultrafast inference**: 1-2 steps vs. 1000 steps for diffusion (250-1000× speedup)
