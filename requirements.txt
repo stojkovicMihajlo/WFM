@@ -1,0 +1,21 @@
+# Core dependencies
+torch>=2.0.0
+torchvision>=0.15.0
+numpy>=1.24.0
+scipy>=1.10.0
+
+# Medical imaging
+nibabel>=5.0.0
+pywavelets>=1.4.0
+
+# Training & logging
+tensorboard>=2.10.0
+tqdm>=4.60.0
+matplotlib>=3.5.0
+
+# Utilities
+blobfile>=2.0.0
+setuptools==58.0.0
+
+# Optional: DICOM support
+# dicom2nifti>=2.4.0
